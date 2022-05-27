@@ -1,0 +1,34 @@
+Memanipulasi Element
+====================
+1.	 Setelah kita tahu cara mengakses elemen melalui objek document, 
+	sekarang saatnya kita belajar cara memanipulasi elemen yang didapat, seperti mengubah konten,
+	menambahkan atau mengubah nilai atribut, dan menambahkan action/event pada elemen.
+	 Memanipulasi Atribut
+	Untuk mengubah atau menambah nilai atribut pada elemen, apa  method yang kita gunakan? setAttribute() jawabannya.
+	Method ini membutuhkan dua buah argumen string yang merupakan nama dan nilai dari atributnya.
+
+Syntx
+------
+1. Set.Atribut
+		someElement.setAttribute("attributName", "attributeValue");
+		example: Contoh Mengatur Atribut (Edit.)
+		let catImage = document.querySelector("#catImage");
+		catImage.setAttribute("src", "https://i.ibb.co/55VG7vL/three-cat.jpg");
+
+2. Mengambil nilai dari atribut elemen yang sedang diterapkan dengan menggunakan method getAttribute()
+		catImage.getAttribute("src");
+	
+3. Memanipulasi Konten Elemen
+		let caption = document.querySelector("#caption");
+		caption.innerHTML = '<em>Tiga Anak Kucing</em>'
+		Untuk Membaca text
+		caption.innerText = "<em>Tiga Anak Kucing</em>";
+4. Membuat elemen baru pada scipt namum hanya deklarasi saja
+		newElement.innerHTML = 'Anda menekan gambar kucing sebanyak <span id="count">0</span> kali';
+		Syntax unt.menampilkannya.
+		document.body.appendChild(newElement);
+
+5.Menambahkan Aksi (Event) pada Element, Jurnal https://developer.mozilla.org/en-US/docs/Web/Events. 
+		catImage.addEventListener('click', function(event) {
+   		document.querySelector('#count').innerText++;
+		});

@@ -1,0 +1,37 @@
+DevTools " mengakses elemen melalui objek document, tampilan ui"
+===============================================================
+Triger (const document) exm. const head = document.head;
+	
+1	getElementById()
+	document.getElementById(“display”);
+	Mengembalikan elemen yang memiliki nilai id “display”.
+
+2	getElementsByName()
+	document.getElementsByName(“button”)
+	Mengembalikan banyak elemen (HTMLCollection) yang memiliki attribute name dengan nilai “button”.
+
+3	getElementsByClassName()
+	document.getElementsByClassName(“button”)
+
+4	Mengembalikan banyak elemen (HTMLCollection) yang memiliki attribute class dengan nilai “button”.
+	getElementsByTagName()
+
+5	document.getElementsByTagname(“div”)
+	Mengembalikan banyak elemen (HTMLCollection) yang merupakan <div> elemen
+
+6	querySelector()
+	document.querySelector(“.button”);
+
+7	Mengembalikan elemen pertama yang menerapkan class “button”.
+	querySelectorAll()
+
+8	document.querySelectorAll(“.button”);
+	Mengembalikan banyak elemen (HTMLCollection) yang menerapkan class “button”.
+
+9	Get data menggunakan perulangan
+	for(let item of buttons){
+	console.log(item)}
+
+Nots:
+Dalam menggunakan method querySelector() tentu kita menggunakan query dalam menentukan target elemen.
+Untuk menargetkan elemen berdasarkan attribute class, kita gunakan tanda “.”, sedangkan jika kita menargetkan dengan menggunakan id, gunakan tanda “#”.
